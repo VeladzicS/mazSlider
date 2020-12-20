@@ -80,8 +80,6 @@ $(document).ready(function ($) {
 
       $(sliderBox).css({ left: moveSliderVar, marginRight: moveSliderVar });
     });
-    $(lastElement).animate({ opacity: 1 }, 400);
-    $(firstElement).animate({ opacity: 1 }, 400);
   };
 
   //Init glavne logike slidera
@@ -103,7 +101,7 @@ $(document).ready(function ($) {
         ".slider__second--ul li:last"
       );
 
-      //Third slider ...
+      //Treci slider ...
     } else if (whichButtonIsClicked === "prev") {
       moveSliderToPrevious(
         ".slider__first--ul",
@@ -117,7 +115,7 @@ $(document).ready(function ($) {
         ".slider__second--ul li:first",
         ".slider__second--ul li:last"
       );
-      //Third slider ...
+      //Treci slider ...
     }
   });
 });
