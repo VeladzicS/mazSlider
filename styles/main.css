@@ -1,0 +1,243 @@
+*,
+*::after *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 110em) {
+  html {
+    font-size: 57%;
+  }
+}
+
+@media only screen and (max-width: 61.75em) {
+  html {
+    font-size: 53%;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  html {
+    font-size: 47%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* SLIDER CSS START */
+.wrapper {
+  padding: 15rem 0;
+  max-width: 1950px;
+  margin: 0 auto;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.container__left {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1 / 9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  height: 54rem;
+}
+
+.container__left .slider {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.container__left .slider__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.container__left .slider__li {
+  width: 100%;
+}
+
+.container__left .slider__li:first-child img {
+  opacity: 1;
+}
+
+.container__left .slider__img {
+  width: auto;
+  height: 25rem;
+  border-radius: 1rem;
+  margin: 0 0.5rem;
+  opacity: 0.3;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container__left .slider__first {
+  grid-column: 1 / -1;
+}
+
+.container__left .slider__second {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+}
+
+.container__left .nav {
+  grid-column: 11 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container__left .nav__btn {
+  background: transparent;
+  border-color: rgba(128, 128, 128, 0.1);
+  border-radius: 5px;
+  padding: 0;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.container__left .nav__btn:focus {
+  outline: none;
+}
+
+.container__left .nav__img {
+  padding: 2rem;
+}
+
+.container__right {
+  grid-column: 9 / -1;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container__right .infoTitle {
+  color: #083b66;
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-top: 0rem;
+}
+
+/* SLIDER CSS END */
+/* RESPONSIVE CSS */
+@media only screen and (max-width: 50em) {
+  .wrapper {
+    padding: 5rem 0;
+  }
+  .container {
+    -ms-grid-rows: 30rem 1fr;
+        grid-template-rows: 30rem 1fr;
+  }
+  .container__left {
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    margin-right: 1rem;
+  }
+  .container__right {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 42em) {
+  .container {
+    -ms-grid-rows: 39rem 1fr;
+        grid-template-rows: 39rem 1fr;
+  }
+}
+
+@media only screen and (max-width: 36em) {
+  .container {
+    -ms-grid-rows: 44rem 1fr;
+        grid-template-rows: 44rem 1fr;
+  }
+}
+
+@media only screen and (max-width: 21.8em) {
+  .container {
+    -ms-grid-rows: 46rem 1fr;
+        grid-template-rows: 46rem 1fr;
+  }
+}
+
+/* RESPONSIVE CSS END */
+/* HELPER CSS START */
+.active {
+  border-color: #083b66 !important;
+}
+
+/* HELPER CSS END */
+/*# sourceMappingURL=main.css.map */
