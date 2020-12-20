@@ -44,9 +44,6 @@ $(document).ready(function ($) {
     const moveSliderToRightOrLeft =
       parseInt($(sliderBox).css("left")) - lastImageWidth;
 
-    $(lastElement).css({ opacity: 0.6 });
-    $(lastElement).animate({ opacity: 1 }, 600);
-
     $(sliderBox).animate({ left: moveSliderToRightOrLeft }, 400, function () {
       //pomjera prvu sliku u lijevo, a zadnju sliku u slideru na prvo mjesto (obrnuto zbog CCS "direction:rtl;")
       $(firstElement).before($(lastElement));
