@@ -6,7 +6,7 @@ Custom made jQuery slider
 
 To use locally Liveserver extension has to be used
 
-#demo
+# demo
 
 To see demo version click https://mazslider.netlify.app/
 
